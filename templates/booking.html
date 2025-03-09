@@ -37,7 +37,7 @@
 
         /* Headings */
         h2 {
-            color: #ffffff;
+            color: #f5efef;
             text-align: center;
             margin-bottom: 20px;
             font-size: 24px;
@@ -87,7 +87,7 @@
 </head>
 <body>
 
-    <h2>Book a Room Online</h2>
+    <h2>Book a Room</h2>
     <form method="POST">
         {% csrf_token %}
         <label>Arrival</label>
@@ -97,6 +97,7 @@
         <input type="text" id="departure_date" name="departure_date" required>
 
         <button type="submit">Book Now</button>
+        <button type="submit">Proceed to Payment</button>
     </form>
 
     <!-- JavaScript for Date Picker -->

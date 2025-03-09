@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from hotelapp import views
-from hotelapp.views import book_room, booking_success
+from hotelapp.views import book_room, booking_success, payment
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,4 +29,5 @@ urlpatterns = [
     path('blog/', views.blog, name='blog'),
     path('book/', book_room, name='book_room'),
     path('success/', booking_success, name='success'),
+    path('payment/<int:booking_id>/', payment, name='payment'),
 ]
