@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Room</title>
+    
+    <!-- jQuery and Flatpickr -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Inline CSS for Beautiful UI -->
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('https://plus.unsplash.com/premium_photo-1682913629540-3857602b540c?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Booking Form Container */
+        form {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            width: 350px;
+            text-align: center;
+        }
+
+        /* Headings */
+        h2 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        /* Input Fields */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Book Now Button */
+        button {
+            background-color: #ff3c00;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #e63200;
+        }
+
+        /* Date Picker Styling */
+        .flatpickr-input {
+            background-color: #ffffff;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+
+        @media (max-width: 500px) {
+            form {
+                width: 90%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>Book a Room Online</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label>Arrival</label>
+        <input type="text" id="arrival_date" name="arrival_date" required>
+
+        <label>Departure</label>
+        <input type="text" id="departure_date" name="departure_date" required>
+
+        <button type="submit">Book Now</button>
+    </form>
+
+    <!-- JavaScript for Date Picker -->
+    <script>
+        flatpickr("#arrival_date", { dateFormat: "Y-m-d" });
+        flatpickr("#departure_date", { dateFormat: "Y-m-d" });
+    </script>
+
+</body>
+</html>
