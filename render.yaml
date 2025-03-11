@@ -7,3 +7,5 @@ services:
     buildCommand: "pip install -r requirements.txt"
     startCommand: "gunicorn hotelmgt.wsgi:application --bind 0.0.0.0:8000"
     port: 8000
+
+    
