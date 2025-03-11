@@ -2,7 +2,8 @@ apiVersion: v1
 kind: Service
 services:
   - type: web
-    name: my-django-app
+    name: hotelapp
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn your_application.wsgi:application --bind 0.0.0.0:8000"
+    startCommand: "gunicorn hotelmgt.wsgi:application --bind 0.0.0.0:8000"
+    port: 8000
