@@ -88,19 +88,19 @@
 <body>
 
     <h2>Book a Room</h2>
-    <form method="POST">
+    <form method="POST" action="{% url 'success' %}">
         {% csrf_token %}
+        
         <label>Arrival</label>
         <input type="text" id="arrival_date" name="arrival_date" required>
-
+    
         <label>Departure</label>
         <input type="text" id="departure_date" name="departure_date" required>
-
+    
+        <!-- Book Now redirects to success page -->
         <button type="submit">Book Now</button>
-        
-        <button type="button" >Proceed to Payment</button>
-
     </form>
+    
 
     <!-- JavaScript for Date Picker -->
     <script>
