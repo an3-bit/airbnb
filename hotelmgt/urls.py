@@ -29,5 +29,6 @@ urlpatterns = [
     path('blog/', views.blog, name='blog'),
     path('book/', book_room, name='book_room'),
     path('success/', booking_success, name='success'),
+    path('payment/', views.payment_view, name='payment_page'),
     path('payment/<int:booking_id>/', payment, name='payment'),
 ]

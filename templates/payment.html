@@ -3,17 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Make Payment</title>
+    <title>Payment</title>
 </head>
 <body>
-
-    <h2>Payment for Booking</h2>
-    <p>Amount: Ksh {{ booking.total_cost }}</p>
-
-    <form method="POST">
-        {% csrf_token %}
-        <button type="submit">Pay Now</button>
-    </form>
-
+    <h2>Proceed with Your Payment</h2>
+    <p>Choose your preferred payment method below.</p>
+    <button onclick="alert('Payment processing...')">Pay Now</button>
 </body>
-</html>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('background.jpg');
+        background-size: cover;
+        color: #333;
+        text-align: center;
+        padding: 50px;
+    }
+    h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 32px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        margin: 10px;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    .payment-options {
+        margin-top: 20px;
+    }
+    .payment-option {
+        display: inline-block;
+        margin: 10px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: white;
+        cursor: pointer;
+    }
+    .payment-option:hover {
+        background-color: #f1f1f1;
+    }
+</style>
+<div class="payment-options">
+    <div class="payment-option" onclick="alert('Mpesa payment selected')">
+        <img src="https://th.bing.com/th/id/R.ee58ac13dfcf00c5d500e23a91474618?rik=SHELJC%2boeQjcOw&pid=ImgRaw&r=0&sres=1&sresct=1" alt="Mpesa" style="width:100px;">
+        <p>Mpesa</p>
+    </div>
+    <div class="payment-option" onclick="alert('Bank payment selected')">
+        <img src="https://images.africanfinancials.com/ke-coop-logo-min.png" alt="Bank" style="width:100px;">
+        <p>Bank</p>
+    </div>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('https://images.pexels.com/photos/21014/pexels-photo.jpg');
+        background-size: cover;
+        color: #333;
+        text-align: center;
+        padding: 50px;
+    }
+    h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 32px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        margin: 10px;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    .payment-options {
+        margin-top: 20px;
+    }
+    .payment-option {
+        display: inline-block;
+        margin: 10px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: white;
+        cursor: pointer;
+    }
+    .payment-option:hover {
+        background-color: #f1f1f1;
+    }
+</style>
+</div>

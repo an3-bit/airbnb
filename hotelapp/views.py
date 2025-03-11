@@ -45,3 +45,6 @@ def payment(request, booking_id):
         return redirect('payment_success')  # Redirect after payment
     
     return render(request, 'payment.html', {'booking': booking})
+
+def payment_view(request):
+    return render(request, 'payment.html')
