@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ox_1+g%piqsbz946cjoh7hs1d-8w#p$9t(w4*wvfc&1xboo3t1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -125,8 +125,6 @@ if not DEBUG:
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-# Optional: If you use a separate static folder for development
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
