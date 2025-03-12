@@ -1,26 +1,29 @@
 {% extends 'index.html' %}
-{% block title %}Blog {% endblock %}
+{% block title %}Blog{% endblock %}
 {% load static %}
+
 {% block content %}
 <div class="back_re">
    <div class="container">
       <div class="row">
          <div class="col-md-12">
-            <div class="title">
-                <h2>Blog</h2>
+            <div class="title text-center">
+                <h2>Our Blog</h2>
             </div>
          </div>
       </div>
    </div>
 </div>
-<!-- blog -->
-<div  class="blog">
+
+<!-- Blog Section -->
+<div class="blog">
    <div class="container">
       <div class="row">
          <div class="col-md-12">
             <div class="titlepage">
-              
-               <p class="margin_0">Lorem Ipsum available, but the majority have suffered </p>
+               <p class="margin_0">
+                  Discover the latest updates, travel tips, and luxury experiences at <strong>Keto Hotel</strong>. From our exquisite accommodations to top-tier dining and wellness experiences, explore what makes us your perfect getaway.
+               </p>
             </div>
          </div>
       </div>
@@ -28,40 +31,48 @@
          <div class="col-md-4">
             <div class="blog_box">
                <div class="blog_img">
-                  <figure><img src="/static/images/blog1.jpg" alt="#"/></figure>
+                  <figure><img src="{% static 'images/blog1.jpg' %}" alt="Luxury Rooms at Keto Hotel" class="img-fluid"/></figure>
                </div>
                <div class="blog_room">
-                  <h3>Bed Room</h3>
-                  <span>The standard chunk </span>
-                  <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generatorsIf you are   </p>
+                  <h3>Luxury Rooms</h3>
+                  <span>Unparalleled Comfort</span>
+                  <p>
+                     Experience world-class luxury in our elegantly designed rooms. Every detail is crafted for your ultimate comfort, featuring modern amenities and breathtaking views.
+                  </p>
                </div>
             </div>
          </div>
          <div class="col-md-4">
             <div class="blog_box">
                <div class="blog_img">
-                  <figure><img src="/static/images/blog2.jpg" alt="#"/></figure>
+                  <figure><img src="{% static 'images/blog2.jpg' %}" alt="Fine Dining at Keto Hotel" class="img-fluid"/></figure>
                </div>
                <div class="blog_room">
-                  <h3>Bed Room</h3>
-                  <span>The standard chunk </span>
-                  <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generatorsIf you are   </p>
+                  <h3>Gourmet Dining</h3>
+                  <span>Culinary Excellence</span>
+                  <p>
+                     Indulge in a fine dining experience with our carefully curated menu. Our chefs bring you the best flavors from around the world, using fresh and locally sourced ingredients.
+                  </p>
                </div>
             </div>
          </div>
          <div class="col-md-4">
             <div class="blog_box">
                <div class="blog_img">
-                  <figure><img src="/static/images/blog3.jpg" alt="#"/></figure>
+                  <figure><img src="{% static 'images/blog3.jpg' %}" alt="Wellness & Spa at Keto Hotel" class="img-fluid"/></figure>
                </div>
                <div class="blog_room">
-                  <h3>Bed Room</h3>
-                  <span>The standard chunk </span>
-                  <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generatorsIf you are   </p>
+                  <h3>Wellness & Spa</h3>
+                  <span>Relax & Rejuvenate</span>
+                  <p>
+                     Unwind in our state-of-the-art spa and wellness center. Whether it's a refreshing massage or a calming yoga session, we offer the perfect escape for relaxation and self-care.
+                  </p>
                </div>
             </div>
          </div>
       </div>
    </div>
 </div>
+<!-- End Blog Section -->
+
 {% endblock %}

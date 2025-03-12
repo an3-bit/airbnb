@@ -1,98 +1,49 @@
 {% extends 'index.html' %}
-{% block title %} Room {% endblock %}
+{% block title %} Our Rooms {% endblock %}
 {% load static %}
+
 {% block content %}
 <div class="back_re">
    <div class="container">
       <div class="row">
          <div class="col-md-12">
-            <div class="title">
+            <div class="title text-center">
                <h2>Our Rooms</h2>
             </div>
          </div>
       </div>
    </div>
 </div>
-<!-- our_room -->
-<div  class="our_room">
+
+<!-- Our Rooms Section -->
+<div class="our_room">
    <div class="container">
       <div class="row">
          <div class="col-md-12">
-            <div class="titlepage">
-               <p  class="margin_0">Lorem Ipsum available, but the majority have suffered </p>
+            <div class="titlepage text-center">
+               <p class="margin_0">Explore our luxurious and comfortable rooms designed to meet your needs.</p>
             </div>
          </div>
       </div>
       <div class="row">
+         {% for i in "123456" %}
          <div class="col-md-4 col-sm-6">
-            <div id="serv_hover"  class="room">
+            <div class="room" id="serv_hover">
                <div class="room_img">
-                  <figure><img src="/static/images/room1.jpg" alt="#"/></figure>
+                  <figure>
+                     <img src="{% static 'images/room' %}{{ i }}.jpg" alt="Room {{ i }}" class="img-fluid"/>
+                  </figure>
                </div>
-               <div class="bed_room">
-                  <h3>Bed Room</h3>
-                  <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there </p>
+               <div class="bed_room text-center">
+                  <h3>Deluxe Room {{ i }}</h3>
+                  <p>Experience unmatched comfort with modern amenities and a cozy ambiance.</p>
                </div>
             </div>
          </div>
-         <div class="col-md-4 col-sm-6">
-            <div id="serv_hover"  class="room">
-               <div class="room_img">
-                  <figure><img src="/static/images/room2.jpg" alt="#"/></figure>
-               </div>
-               <div class="bed_room">
-                  <h3>Bed Room</h3>
-                  <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there </p>
-               </div>
-            </div>
-         </div>
-         <div class="col-md-4 col-sm-6">
-            <div id="serv_hover"  class="room">
-               <div class="room_img">
-                  <figure><img src="/static/images/room3.jpg" alt="#"/></figure>
-               </div>
-               <div class="bed_room">
-                  <h3>Bed Room</h3>
-                  <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there </p>
-               </div>
-            </div>
-         </div>
-         <div class="col-md-4 col-sm-6">
-            <div id="serv_hover"  class="room">
-               <div class="room_img">
-                  <figure><img src="/static/images/room4.jpg" alt="#"/></figure>
-               </div>
-               <div class="bed_room">
-                  <h3>Bed Room</h3>
-                  <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there </p>
-               </div>
-            </div>
-         </div>
-         <div class="col-md-4 col-sm-6">
-            <div id="serv_hover"  class="room">
-               <div class="room_img">
-                  <figure><img src="/static/images/room5.jpg" alt="#"/></figure>
-               </div>
-               <div class="bed_room">
-                  <h3>Bed Room</h3>
-                  <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there </p>
-               </div>
-            </div>
-         </div>
-         <div class="col-md-4 col-sm-6">
-            <div id="serv_hover"  class="room">
-               <div class="room_img">
-                  <figure><img src="/static/images/room6.jpg" alt="#"/></figure>
-               </div>
-               <div class="bed_room">
-                  <h3>Bed Room</h3>
-                  <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there </p>
-               </div>
-            </div>
-         </div>
+         {% endfor %}
       </div>
    </div>
 </div>
-<!-- end our_room -->
+<!-- End Our Rooms Section -->
 
 {% endblock %}
