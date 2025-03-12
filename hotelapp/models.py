@@ -9,8 +9,8 @@ class Booking(models.Model):
     arrival_date = models.DateField()
     departure_date = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)
-    total_cost = models.DecimalField(max_digits=10, decimal_places=2)
-    payment_method = models.CharField(max_length=10, choices=PAYMENT_METHODS)
+    total_cost = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    payment_method = models.CharField(max_length=10, choices=PAYMENT_METHODS, default='mpesa')
     paid = models.BooleanField(default=False)
 
     def __str__(self):
